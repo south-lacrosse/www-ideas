@@ -1,0 +1,11 @@
+html {
+    box-sizing: border-box; /* 1 */
+    /* shows at bottom of page if body is not long enough */
+    background-color: #BEC3C6;
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 16px;
+}
+/* wait until font loaded to style text */
+.no-js, .wf-active {
+    font-family: "Open Sans", Verdana, Tahoma, sans-serif;
+}

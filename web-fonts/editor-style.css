@@ -1,0 +1,4 @@
+/* set body font to Open Sans as default stylesheet assumes a font loader is used */
+body {
+    font-family: "Open Sans", Verdana, Tahoma, sans-serif;
+}

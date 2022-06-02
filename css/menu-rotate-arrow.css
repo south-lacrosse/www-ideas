@@ -1,0 +1,22 @@
+.mb {
+    color: #fff;
+    cursor: pointer;
+    background-color: inherit;
+    padding: 0.5em 1.6em 0.5em 0.6em;
+}
+.mb::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 1.5em;
+    height: 100%;
+    background-image: url(img/chevron-down.svg);
+    background-position: center;
+    background-size: auto 0.8em;
+    background-repeat: no-repeat;
+}
+.mb[aria-expanded="true"]::after {
+    top: 3px;
+    transform: rotate(180deg);
+}
