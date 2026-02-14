@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Columns</title>
+    <link rel="stylesheet" href="grid-columns.css" />
+  </head>
+  <body>
+    <h1>Title Outside</h1>
+    <div class="content-grid">
+      <h1>Sample of Our Layout With CSS Grid Columns</h1>
+      <p>
+        Saw this way of styling layouts and thought it looked interesting, so
+        tried it for our layout (at least as of 2026) - so we have a 1024px
+        column which is centred, and alignwide content fills this, with default
+        alignment content 720px wide and left justified in that column, with
+        alignfull content the full width.
+      </p>
+      <p>
+        Our current way uses an .inner container, and then busts out of that for
+        alignfull with negative margins, which works fine, though it does need a
+        bit of margin to handle scrollbars.
+      </p>
+      <p>
+        This styling is saved here in case we want to use it in the future (we
+        should!) - maybe when we move to a block theme?
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae facere
+        deserunt veritatis ipsa blanditiis aliquid porro totam! Voluptatum modi
+        sapiente consequatur ullam minima provident aspernatur quibusdam sed
+        incidunt? Delectus, laudantium.
+      </p>
+      <p class="alignwide">
+        <b>WIDE PARA</b> Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Vitae facere deserunt veritatis ipsa blanditiis aliquid porro
+        totam! Voluptatum modi sapiente consequatur ullam minima provident
+        aspernatur quibusdam sed incidunt? Delectus, laudantium.
+      </p>
+      <p class="alignfull">
+        <b>FULL WIDTH</b> Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Vitae facere deserunt veritatis ipsa blanditiis aliquid porro
+        totam! Voluptatum modi sapiente consequatur ullam minima provident
+        aspernatur quibusdam sed incidunt? Delectus, laudantium.
+      </p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae facere
+        deserunt veritatis ipsa blanditiis aliquid porro totam! Voluptatum modi
+        sapiente consequatur ullam minima provident aspernatur quibusdam sed
+        incidunt? Delectus, laudantium.
+      </p>
+    </div>
+  </body>
+</html>

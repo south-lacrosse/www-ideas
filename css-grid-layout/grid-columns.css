@@ -1,0 +1,93 @@
+/*
+The layout is mainly controlled by grid-template-columns. Hopefully it should be
+pretty self explanatory.
+
+Also left commented out styles that were being tested in case they are useful */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.content-grid {
+  --padding-inline: 1rem; /* Minnimum padding for everything except full width */
+  --content-max-width: 720px;
+  --alignwide-max-width: 1024px;
+
+  --alignwide-size: calc(var(--alignwide-max-width) - var(--content-max-width));
+
+  display: grid;
+  grid-template-columns:
+    [alignfull-start] minmax(var(--padding-inline), 1fr)
+    [alignwide-start content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end] minmax(0, var(--alignwide-size))
+    [alignwide-end] minmax(var(--padding-inline), 1fr) [alignfull-end];
+  /* Original code from Kevin Powell for content/wide/full all centred
+
+   grid-template-columns:
+		[alignfull-start] minmax(var(--padding-inline), 1fr)
+		[alignwide-start] minmax(0, var(--alignwide-size))
+		[content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width))
+		[content-end]
+		minmax(0, var(--alignwide-size)) [alignwide-end]
+		minmax(var(--padding-inline), 1fr) [alignfull-end]; */
+}
+
+.content-grid > :not(.alignwide, .alignfull),
+.alignfull > :not(.alignwide, .alignfull) {
+  grid-column: content;
+}
+
+.content-grid > .alignwide {
+  grid-column: alignwide;
+}
+
+.content-grid > .alignfull {
+  grid-column: alignfull;
+}
+
+/* .content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 900px;
+  --breakout-max-width: 1200px;
+
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+img.full-width {
+  width: 100%;
+  max-height: 45vh;
+  object-fit: cover;
+} */
